@@ -1,0 +1,141 @@
+/******************************/
+/* Extra Small Devices (Phones, 600px and Down) */
+/******************************/
+
+/* Header Styles */
+header {
+  z-index: 4;
+  color: #fff;
+  height: 3.5rem;
+  width: 100%;
+  border-bottom: 1px solid #CCCCCC;
+  background-image: url(../images/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  float: left;
+  text-align: left;
+}
+
+/* Rotate Burger Icon */
+.main_nav_burguer {
+  margin: 0.6rem 0 0 1rem;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bolder;
+  transform: rotate(90deg);
+  color: lightslategray;
+  transition: 0.2s ease-in-out;
+}
+
+.main_nav_burguer:hover {
+  cursor: pointer;
+  transform: rotate(0deg);
+  color: silver;
+  transition: 0.2s ease-in-out;
+}
+
+/* Checkbox for Popup Menu */
+#main_check:checked {
+  cursor: pointer;
+  transform: rotate(0deg);
+  color: silver;
+  transition: 0.2s ease-in-out;
+}
+
+/* Popup First-Level Menu Styles */
+.nav_bar_level1 {
+  width: 0%;
+  height: 0%;
+  border-radius: 4px;
+  transition: 0.2s ease-in-out;
+  background-color: aliceblue;
+}
+
+/* Hide Checkbox */
+input {
+  display: none;
+}
+
+/* Hide Second-Level Menu */
+.nav_bar_level1 li ul {
+  display: none;
+}
+
+/* Hide First-Level Menu */
+.nav_bar_level1 li {
+  display: none;
+}
+
+/* Display First-Level Menu on Checkbox Checked */
+#main_check:checked ~ * .nav_bar_level1 {
+  display: block;
+}
+
+/* Display First-Level Menu Items on Checkbox Checked */
+#main_check:checked ~ * .nav_bar_level1 li {
+  display: block;
+  font-size: 1.3rem;
+  margin: 0.5rem;
+  color: lightslategray;
+  font-weight: bold;
+  transition: 0.5s ease-in-out;
+}
+
+/* Hover Link Menu Styles */
+.nav_bar_level1 li label span:hover,
+ul li span:hover {
+  background-color: #434343;
+  width: 100%;
+  padding: 0.2rem 1rem;
+  border-radius: 4px;
+  color: #FAFAFA;
+  cursor: pointer;
+}
+
+/* Display First-Level Menu Background */
+#main_check:checked ~ * .nav_bar_level1 {
+  display: block;
+  margin: 1rem;
+  padding: 0.8rem;
+  flex-direction: column;
+  transition: 0.3s ease-in-out;
+  width: 50vw;
+  transition: 1s ease-in-out;
+}
+
+/* Display Second-Level Menu on Checkbox Checked */
+#second_check:checked + ul {
+  display: block;
+}
+
+/* Display Third-Level Menu on Checkbox Checked */
+#third_check:checked + ul {
+  display: block;
+}
+
+/******************************/
+/* Small Devices (Portrait Tablets and Large Phones, 600px and Up) */
+/******************************/
+@media only screen and (min-width: 600px) {
+  /* Add styles for small devices here if needed */
+}
+
+/******************************/
+/* Medium Devices (Landscape Tablets, 768px and Up) */
+/******************************/
+@media only screen and (min-width: 768px) {
+  header {
+    background-position: left 1rem;
+  }
+  .mobile_nav {
+    display: none;
+  }
+}
+
+/******************************/
+/* Large Devices (Laptops/Desktops, 992px and Up) */
+/******************************/
+@media only screen and (min-width: 992px) {
+  /* Add styles for large devices here if needed */
+}
